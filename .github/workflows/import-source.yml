@@ -3,7 +3,7 @@ name: Import source bundle
 on:
   push:
     paths:
-      - desktop-workspace-source.zip
+      - desktop-workspace-source-v2.zip
 
 permissions:
   contents: write
@@ -18,8 +18,8 @@ jobs:
       - name: Extract tracked source files
         shell: bash
         run: |
-          unzip -o desktop-workspace-source.zip -d .
-          rm -f desktop-workspace-source.zip
+          unzip -o desktop-workspace-source-v2.zip -d .
+          rm -f desktop-workspace-source-v2.zip
 
       - name: Commit complete source tree
         shell: bash
